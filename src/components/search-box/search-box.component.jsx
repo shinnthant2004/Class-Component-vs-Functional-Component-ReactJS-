@@ -3,6 +3,7 @@ import '../search-box/search-box.style.css';
 
 class SearchBox extends Component {
  render(){
+  console.log("search box render")
     return (
         <input
       className={this.props.className}
