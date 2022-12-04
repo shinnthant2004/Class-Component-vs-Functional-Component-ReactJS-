@@ -33,8 +33,6 @@ const App = () => {
     setSearchField(searchValue);
   };
 
-
-
   return (
           <div className="App">
             <h1 className='app-title'>Monster Rolodex</h1>
