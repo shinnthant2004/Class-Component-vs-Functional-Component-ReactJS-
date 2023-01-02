@@ -2,7 +2,6 @@ import '../card-list/card-list.style.css';
 import Card from "../card/card.component";
 
 const CardList = ({monsters}) => {
-        console.log("card list render")
         return (
           <div className="card-list">
            {

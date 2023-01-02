@@ -10,6 +10,7 @@ const App = () => {
   console.log("app render");
 
   const [searchField,setSearchField] = useState('');
+  const [titleField,setTitleField] = useState('');
   const [monsters,setMonsters] = useState([]);
   const [filterMonsters,setFilterMonsters] = useState(monsters);
 
@@ -33,10 +34,17 @@ const App = () => {
     setSearchField(searchValue);
   };
 
+  const onTitleChange = (e)=>{
+    const searchValue = e.target.value.toLocaleLowerCase();
+    setTitleField(searchValue);
+  };
+
   return (
           <div className="App">
+            <h2>{titleField}</h2>
             <h1 className='app-title'>Monster Rolodex</h1>
             <SearchBox className="search-box" placeholder="search monsters" onChangeHandler={onSearchChange}/>
+            <SearchBox className="title-box" placeholder="create title" onChangeHandler={onTitleChange}/>
             <CardList monsters = {filterMonsters} />
           </div>
         )
